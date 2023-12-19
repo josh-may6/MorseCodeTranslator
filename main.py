@@ -19,7 +19,6 @@ def is_mores_code(user_input):
 
 def text_to_morse(user_input):
     morse_dict = {row.letter: row.code for (index, row) in data.iterrows()}
-
     morse_code_list = [morse_dict[letter] for letter in user_input]
     morse_code_string = ' '.join(morse_code_list)
     output_entry.insert(0, morse_code_string)
@@ -64,9 +63,6 @@ output_label.grid(column=0, row=3)
 # Buttons
 translate_button = Button(text="Translate", width=13, command=translate)  # Add function to button for translate funtion command=translate
 translate_button.grid(column=2, row=1)
-
-add_button = Button(text="Add to Favorites", width=36)  # Add function for save responses command=save
-add_button.grid(column=1, row=4)
 
 # Entries
 input_entry = Entry(width=35)
